@@ -1,0 +1,45 @@
+
+    <section id="post">
+        <div class="container" id="portfolio">
+            {% if page.type != "home" %}
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>{{ page.title }}</h2>
+                    {% if page.description %}<h3>{{ page.description }}</h3>{% endif %}
+                    {% if page.author %}
+                        <hr class="separating-line">
+                        <p class="text-right" style="margin-bottom: 40px;">by <em>{{ page.author }}</em> on {{ page.date | date: '%B %d, %Y' }}</p>
+                    {% else %}
+                        <hr class="separating-line"{% if page.category != "research" and page.category != "design" %} style="margin-bottom: 40px;"{% endif %}>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div id="article" itemprop="articleBody">
+                {% if page.img %}
+                    <div id="article-img" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                        <img src="/img/portfolio/{{ page.img }}" class="img-fluid img-centered img-container" style="margin-bottom: 60px;" alt="{{ page.alt }}" itemprop="url contentUrl">
+                    </div>
+                {% endif %}
+
+                {% if page.link %}
+                    <h3 class="no-print">{{ page.link-alt }}: <a href="{{ page.link }}" target="_blank">[link]</a></h3>
+                {% endif %}
+
+                {% if page.paper_pdf %}
+                    <h3>Reference paper: <em>{{ page.paper_title }}</em><a class="no-print" href="{{ site.url }}/papers/{{ page.paper_pdf }}.pdf" target="_blank"> [PDF]</a><a class="no-print" href="{{ site.url }}/papers/{{ page.paper_pdf }}.bib" target="_blank"> [BIB]</a></h3>
+                {% endif %}
+
+                {% if page.authors %}
+                    <p><strong>Authors:</strong> <em>{{ page.authors }}</em></p>
+                {% endif %}
+
+                {% if page.submission %}
+                    <p><strong>Submission:</strong> <em>{{ page.submission }}</em></p>
+                {% endif %}
+
+                {{ content | markdownify }}
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,13 @@
+<div id="article-img" class="img-container" style="margin-top: 20px; {% if include.description %}margin-bottom: 0px;{% else %}margin-bottom: 20px;{% endif %} {% if include.max-width %} max-width: {{ include.max-width }}; {% endif %}">
+  {% if include.exturl %}
+    <img src="{{ include.exturl }}" class="img-fluid img-centered" alt="{{ include.url }}" />
+  {% else %}
+    <a href="/img/{{ include.url }}" target="_blank">
+      <img src="/img/{{ include.url }}" class="img-fluid img-centered" alt="{{ include.url }}" />
+    </a>
+  {% endif %}
+
+  {% if include.description %}
+  <p class="img-caption" style="margin-bottom: 20px;">{{ include.description }}</p>
+  {% endif%}
+</div>

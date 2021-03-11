@@ -1,0 +1,51 @@
+    <!-- Footer -->
+    <footer class="text-center no-print">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h3>Location</h3>
+                        <p class="small">
+                            {% for adress in site.address %}
+                                {{ adress.line }} <br>
+		                    {% endfor %}
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3>Get in Touch</h3>
+                        <ul class="list-inline">
+                            {% for network in site.social %}
+                            <li class="list-inline-item">
+                                <a href="{{ network.url }}" class="btn-other" target="_blank"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                            </li>
+                            {% endfor %}
+                            <li class="list-inline-item">
+                                <a href="mailto:{{ site.email }}" class="btn-other"><i class="fa fa-fw fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3>Credits</h3>
+                        <p class="small">Made with <a href="http://jekyllrb.com/">Jekyll for Github</a>. The design is modified from the beautiful <a href="https://github.com/jeromelachaud/freelancer-theme">Freelancer Theme</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 small">
+                        Copyright &copy; {{ site.title }} 20{{ site.time | date: '%y' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes, plus on pages with more than 5 minutes reading time (900 words)) -->
+    {% assign words = content | number_of_words %}
+    <div class="scroll-top page-scroll d-block d-md-none no-print" {% if words > 900 or page.type == "cv" %}style="display: block !important;"{% endif %}>
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>

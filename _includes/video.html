@@ -1,0 +1,8 @@
+<div id="article-img" class="no-print">
+  <div class="video-container" style="{% if include.description %}margin-bottom: 0px;{% else %}margin-bottom: 20px;{% endif %} {% if include.width%}{{include.width}}{% endif%}">
+    <iframe width="{{include.width}}" height="{{include.height}}" class="img img-centered" src="{{ include.url }}?showinfo=0&amp;rel=0&amp;vq=hd720" frameborder="0" allowfullscreen style="margin-bottom: 0px;"></iframe>
+  </div>
+  {% if include.description %}
+  <p class="img-caption" style="margin-bottom: 20px;">{{ include.description }}</p>
+  {% endif %}
+</div>

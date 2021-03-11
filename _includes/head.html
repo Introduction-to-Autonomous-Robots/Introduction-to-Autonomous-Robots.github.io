@@ -1,0 +1,73 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="description"        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="google-site-verification" content="FmJO1IL7vp9BDzG5P2e4etTydX3u0BvAUmsaN1_jrXg" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+
+    {% for network in site.social %}
+    {% if network.title == "google-plus" %}
+    <link href="{{ network.url }}" rel="publisher" />
+    {% endif %}
+    {% endfor %}
+
+    {% if page.type == "article" && page.img %}
+    <meta name="thumbnail"    content="/img/portfolio/{{ page.img }}" />
+    <!-- <meta property="og:image" content="{{ /img/portfolio/{{ page.img }} | prepend: site.baseurl }}" /> -->
+    {% else %}
+    <meta name="thumbnail"    content="{{ site.logo }}" />
+    <!-- <meta property="og:image" content="{{ site.logo }}" /> -->
+    {% endif %}
+
+    <!-- Custom CSS & Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
+
+    <!-- Custom Fonts -->
+    <script src="https://use.fontawesome.com/ebd2d08b0e.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Assistant:300,600" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,600" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/font-hack/2.019/css/hack-extended.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/img/fav/favicon.ico">          <!-- 16x16 -->
+    <link rel="shortcut icon" href="/img/fav/favicon.png">          <!-- 32x32 -->
+    <link rel="apple-touch-icon-precomposed" href="/img/fav/apple-touch-icon-precomposed.png">  <!-- 57x57   (precomposed) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/fav/apple-touch-icon-72x72-precomposed.png">      <!-- 72x72   (precomposed) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/fav/apple-touch-icon-114x114-precomposed.png">  <!-- 114x114 (precomposed) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/fav/apple-touch-icon-144x144-precomposed.png">  <!-- 144x144 (precomposed) -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/fav/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/fav/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/fav/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/fav/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/fav/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/fav/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/fav/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/fav/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/img/fav/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/fav/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/img/fav/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/img/fav/favicon-16x16.png" sizes="16x16">
+    <meta name="msapplication-TileColor" content="#{{ site.color.primary }}">
+    <meta name="msapplication-TileImage" content="/img/fav/mstile-144x144.png">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics-id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ site.google-analytics-id }}');
+    </script>
+    <!-- Mathjax Support -->
+    <script type="text/javascript" async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>

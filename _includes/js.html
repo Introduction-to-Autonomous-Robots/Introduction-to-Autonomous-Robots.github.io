@@ -1,0 +1,82 @@
+    <!-- jQuery Version 3.2.1 -->
+    <script src="{{ "/js/jquery-3.3.1.slim.min.js" }}"></script>
+
+    <!-- Bootstrap Core JavaScript + Popper -->
+    <script src="{{ "/js/bootstrap.bundle.min.js" }}"></script>
+
+    <!-- JavaScript Plugins -->
+    <script src="{{ "/js/jquery.easing.min.js" }}"></script>
+    <script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
+
+    <script>
+      // cbpAnimatedHeader.js v1.0.0
+      var cbpAnimatedHeader = (function() {
+
+        var docElem = document.documentElement,
+          header = document.querySelector( '.navbar' ),
+          collapse = document.querySelector( '.navbar-collapse' ),
+          didScroll = false,
+          changeHeaderOn = 300;
+
+        var lsy = scrollY();
+
+        function init() {
+          window.addEventListener( 'scroll', function( event ) {
+            if( !didScroll ) {
+              didScroll = true;
+              setTimeout( scrollPage, 150 );
+            }
+          }, false );
+        }
+
+        function scrollPage() {
+          var sy = scrollY();
+
+          if ( sy > lsy ) {
+            classie.add( header, 'navbar-shrink' );
+
+            // Disable the toggler while moving down or up
+            if (collapse.classList.contains('show')) {
+              $('.navbar-toggler:visible').click();
+            }
+          }
+          else {
+            classie.remove( header, 'navbar-shrink' );
+          }
+          didScroll = false;
+          lsy = scrollY();
+        }
+
+        function scrollY() {
+          return window.pageYOffset || docElem.scrollTop;
+        }
+
+        init();
+
+      })();
+    </script>
+
+    <script>
+      // jQuery for page scrolling feature - requires jQuery Easing plugin
+      $(function() {
+          $('.page-scroll a').bind('click', function(event) {
+              var $anchor = $(this);
+              $('html, body').stop().animate({
+                  scrollTop: $($anchor.attr('href')).offset().top
+              }, 1500, 'easeInOutExpo');
+              event.preventDefault();
+          });
+      });
+
+      // Highlight the top nav as scrolling occurs
+      $('body').scrollspy({
+          target: '#navbar-scrollspy'
+      })
+
+      // Closes the Responsive Menu on Menu Item Click
+      $('.navbar-collapse ul li a').click(function() {
+          $('.navbar-toggler:visible').click();
+      });
+
+      window.addEventListener("hashchange", function() { scrollBy(0, -110) });
+    </script>

@@ -1,0 +1,74 @@
+# Site settings
+title: Introduction To Autonomous Robots
+email: nikolaus.correll@colorado.edu
+url: https://introduction-to-autonomous-robots.github.io
+description: "Best book ever"
+owner: Introduction To Autonomous Robots
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: github-alt
+    url: https://github.com/Introduction-To-Autonomous-Robots
+
+logo: /img/logo-square.svg
+logopng: /img/logo-square.png
+logo2: /img/logo-rect.svg
+logo3: /img/logo-long-white-text.svg
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 1111 Engineering Dr,
+  - line: Computer Science Department,
+  - line: University of Colorado,
+  - line: Boulder, 80309, CO, U.S.A.
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  highlighter: rouge
+  toc_levels: "1,2,3"
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+  - rouge
+  - jekyll-seo-tag
+  - jemoji
+  #- jekyll-mentions
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "_posts"
+    values:
+      type: "article"
+  -
+    scope:
+      path: "_posts/wiki"
+    values:
+      category: "wiki"
+  -
+    scope:
+      path: "_posts/news"
+    values:
+      category: "news"
+  -
+    scope:
+      path: "_posts/research"
+    values:
+      category: "research"
+
+# Default colors (hex-codes without the leading hash-tag):
+color:
+  banner: 66a329                            # This is a green banner color (for red, use bf4040)
+  articletext: 3c3c3c                       # This is the text color
+  primary:  ffffff                          # This is the background of the logo, light gray
+  secondary: 282828                         # This is dark gray
+  secondary-alpha: rgba(40,40,40,.7)        # This is the same as the secondary color but with an alpha value
+  # accent: 4982a7
+  accent: 00a0a0                            # This is an electric blue accent
