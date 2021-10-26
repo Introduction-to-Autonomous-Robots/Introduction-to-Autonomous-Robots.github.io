@@ -21,45 +21,52 @@ This book can be cited as follows:
 
 # Exercises
 
-We have developed a series of exercises in Webots, an opensource, physics-based robot simulator that provides stable binaries for Windows, Linux and Mac. Exercises can be found in the matrix below.
-
-| Name | Description | Learning Goals | Video |
-|------|-------------|----------------|-------|
-
-The book is supplemented by a series of [exerices](exercises.html) in Webots, an opensource, physics-based robot simulator that provides stable binaries for Windows, Linux and Mac, that can be used to develop a series of [curricula](curricula.html).
-
-
-# Exercises
-
 We have developed a series of exercises in Webots Exercises can be found in the matrix below. This list is in no particular order, please refer to the [curricula](curricula.html) for a suggested order to cover different classes.
 
 ## Lab 1: Reactive Behaviors and State Machines
 
-{% include image.html url="A.png" max-width="15%" description="I rock"%}
+{% include image.html url="A.png" max-width="45%" description="I rock"%}
 - Basic reactive behaviors such as attraction and avoidance
 - How to compose multiple behaviors into more complex ones
 - The notion of state and basic ways of implementation
 
-## Line following
+## Lab 2: Line following and odmetery
 
-Reactive control for line following, odometry of differential wheel robot
+{% include image.html url="B.png" max-width="45%" %}
 
-## Basic controls
+- Implement the forward kinematics of a differential wheel robot on the ePuck platform 
+- To experience and quantify sensor noise from wheel-slip, discretization, and timing violations 
+- To understand the concept of “loop closure”
 
-Inverse kinematics of differential-wheel robot, basic feedback control
+## Lab 3: Inverse kinematics and feedback control
 
-## Mapping
+{% include image.html url="C.png" max-width="45%" %}
 
-{% include image.html url="D.png" max-width="15%" %}
-Basic discrete map representations, coordinate transforms to map sensor readings into world coordinates, discrete and algorithmic aspects of mapping
+- Understand how to calculate the wheel speed given a desired velocity and/or position 
+- Implement basic feedback control 
+- See the need for higher-level reasoning / path-planning
 
+## Lab 4: Mapping with Lidar
 
+{% include image.html url="D.png" max-width="45%" %}
+
+- Implement a basic discrete map representation
+- Use coordinate transforms to map sensor readings into world coordinates
+- Understand discrete and algorithmic aspects of mapping
+
+## Lab 5: Path planning
+
+{% include image.html url="E.png" max-width="45%" %}
+
+-	Understand the challenges of map construction
+-	Implement a shortest-path finding algorithm (Dijkstra's algorithm or A*) on a grid map
+-	Use path planning to generate a discrete set of waypoints for a robot to follow and demonstrate it in the Tiago environment
 
 # Curricula
 
 ## Introduction to Robotics
 
-A, B, C, D, E, F
+A, B, C, D, E
 
 ## Advanced Robotics
 
