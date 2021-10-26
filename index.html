@@ -1,29 +1,77 @@
--
+---
 type: home
 subtypes:
 ---
 
 An open textbook focusing on computational principles of autonomous robots. The source-code is released under Creative Commons 2.0 (CC-BY-NC-ND), whereas the print version is copyrighted by MIT Press. You are therefore permitted to use images and content from the book for non-commercial purposes (including teaching) with proper attribution, but you cannot post compiled versions of the book online.
 
-The book is supplemented by a series of [exerices](exercises.html) in Webots, an opensource, physics-based robot simulator that provides stable binaries for Windows, Linux and Mac, that can be used to develop a series of [curricula](curricula.html). 
+This book can be cited as follows:
 
+ * Nikolaus Correll, Bradley Hayes, Christoffer Heckman and Alessandro Roncone. Introduction to Autonomous Robots: Mechanisms, Sensors, Actuators, and Algorithms, MIT Press, 2022 (forthcoming).
+
+~~~
+@book{correll2022introduction,
+  title={ Introduction to Autonomous Robots: Mechanisms, Sensors, Actuators, and Algorithms},
+  author={Correll, Nikolaus and Hayes, Bradley, and Heckman, Christoffer, and Roncone, Alessandro},
+  year={2022},
+  edition={1st},
+  publisher={MIT Press, Cambridge, MA}
+}
+~~~
 
 # Exercises
 
-We have developed a series of exercises in Webots Exercises can be found in the matrix below. This list is in no particular order, please refer to the [curricula](curricula.html) for a suggested order to cover different classes. 
+We have developed a series of exercises in Webots Exercises can be found in the matrix below. This list is in no particular order, please refer to the [curricula](curricula.html) for a suggested order to cover different classes.
 
-|Key| Name             | Learning Goals | Image |
-|Key|------------------|----------------|-------|
-|A| State machine    | Implement a simple state machine to drive, turn, and avoid obstacles.           | ![Exercise A](img/A.png)             |
+## Lab 1: Reactive Behaviors and State Machines
 
+{% include image.html url="A.png" max-width="45%" description="I rock"%}
+- Basic reactive behaviors such as attraction and avoidance
+- How to compose multiple behaviors into more complex ones
+- The notion of state and basic ways of implementation
+
+## Lab 2: Line following and odmetery
+
+{% include image.html url="B.png" max-width="45%" %}
+
+- Implement the forward kinematics of a differential wheel robot on the ePuck platform 
+- To experience and quantify sensor noise from wheel-slip, discretization, and timing violations 
+- To understand the concept of “loop closure”
+
+## Lab 3: Inverse kinematics and feedback control
+
+{% include image.html url="C.png" max-width="45%" %}
+
+- Understand how to calculate the wheel speed given a desired velocity and/or position 
+- Implement basic feedback control 
+- See the need for higher-level reasoning / path-planning
+
+## Lab 4: Mapping with Lidar
+
+{% include image.html url="D.png" max-width="45%" %}
+
+- Implement a basic discrete map representation
+- Use coordinate transforms to map sensor readings into world coordinates
+- Understand discrete and algorithmic aspects of mapping
+
+## Lab 5: Path planning
+
+{% include image.html url="E.png" max-width="45%" %}
+
+-	Understand the challenges of map construction
+-	Implement a shortest-path finding algorithm (Dijkstra's algorithm or A*) on a grid map
+-	Use path planning to generate a discrete set of waypoints for a robot to follow and demonstrate it in the Tiago environment
 
 # Curricula
 
 ## Introduction to Robotics
 
-| Exercise | Goal | Image |
-|----------|------|-------|
-|A|Gain first experiences with a differential wheel robotic platform, infrared sensing, and basic state machines|
+A, B, C, D, E
+
+## Advanced Robotics
+
+G, H, I, J, K, L
+
 
 # Reference
 This book can be cited as follows:
