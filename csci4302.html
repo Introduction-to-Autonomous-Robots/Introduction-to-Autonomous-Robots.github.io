@@ -1,0 +1,112 @@
+---
+permalink: csci4302.html
+title: "CSCI 4302 -- Advanced Robotics"
+description: "Manipulation"
+type: csci4302
+---
+
+# Description
+
+The overarching learning goal of this class is to create an appreciation for the tight interplay between mechanism, sensor, and control in the design of intelligent systems. This includes (1) formally describing the forward and inverse kinematics of a mechanism, (2) understanding the sources of uncertainty in sensing and actuation as well as to describe them mathematically, (3) how to discretize the robot’s state and reason about it algorithmically, and (4) experiencing 1-3 on a real robotic platform.
+
+## Meet the Team
+
+ * Spring 2022
+   * Instructor: Nikolaus Correll
+
+# Syllabus
+Understand the specific challenges in robotic manipulation, ranging from mechanisms to sensing, perception, and control.
+
+| Week| Content | Reading | Lab  |
+| --- | ------- | ------- | ---- |
+| 1   | Manipulation overview | [[Robots getting a grip on manipulation]](https://www.youtube.com/watch?v=nV5dm42ZR_c), IROS 2020 keynote | Intro to Webots |
+| 2   | Coordination systems and frames of reference | Section 2.4 | Inverse kinematics |
+| 3   | Forward and inverse kinematics of manipulating arms | Sections 3.1-3 | Inverse kinematics |
+| 4   | Forces | Chapter 4 | Inverse kinematics |
+| 5   | Grasping | Chapter 5 | Grasping |
+| 6   | Actuation for manipulation | Chapter 6, [["Systems, devices, components, and methods for a compact robotic gripper with palm-mounted sensing, grasping, and computing devices and components." U.S. Patent No. 11,148,295]](https://patents.google.com/patent/US11148295B2/en) | Grasping |
+| 7   | Sensors for manipulation | Chapter 7 | Collision avoidance|
+| 8   | Vision for manipulation | Chapter 8 | Collision avoidance |
+| 9   | Features: segmentation and PCA | Chapter 9, Section B.5 | Object recognition |
+| 10  | Task execution using Behavior Trees | Chapter 11 | Object recognition |
+| 11  | Manipulation planning | Chapter 14 | Bin picking |
+| 12  | Uncertainty | Chapter 16 | Bin picking |
+| 13  | Project | Chapter E | Project |
+| 14  | Project | no reading | Project |
+| 15  | Project presentations | no reading | Project |
+| 16  | Project presentations | no reading | Project |
+
+Labs are due Wednesday evening at 6pm prior to the begin of the next lab. There are no extensions. There is no collaboration on labs allowed. We will be working on labs together in class and you are welcome to discuss your approach with fellow students, but each submission needs to be your own. (Plagiarism is enforced using automated tools.) The project instead is encouraged to be a team effort.
+ 
+
+## Lab 1: Inverse kinematics
+
+The goal of this lab is to implement basic inverse kinematics that allows a Universal Robot UR5 to move from point to point following the shortest path in Cartesian and Joint space (akin to the "moveL" and "moveJ" that the real UR5 API provides). You will first implement a closed-form solution of the UR5's inverse kinematics and then implement a basic trajectory following algorithm. These commands will be demonstrated by moving the robot above a red ball placed underneath it. This will require mounting a stereo camera at the robot's end-effector and implementation of basic image processing routines.  
+
+## Lab 2: Grasping
+
+The goal of this lab is to model a simple gripping mechanism in Webots and use it to pick up a ball that is placed in the robot's field of view and dropping it into a bin next to the robot. This lab requires a working implementation of inverse kinematics, trajectory controller, and simple perception from "Lab 1: inverse kinematics".
+
+## Lab 3: Collision avoidance
+
+The goal of this lab is to implement a simple collision avoidance pipeline. The UR5 is positioned above a bin with known dimensions. You will first model the bin and the robot end-effector in a simple physics simulator (bullet). Here, the bin dimensions are given and you simply need to detect the bin in the 3D camera data. 
+
+## Lab 4: Object recognition
+The goal of this lab is to identify individual objects in dense, cluttered environments such as a bin. 
+Implement a simple segmentation algorithm (DBSCAN) to identify individual balls in the environment and use principal component analysis to identify possible grasp poses. 
+
+## Lab 5: Bin picking
+Use your object recognition, collision avoidance, and inverse kinematic code to implement a Behavior Tree for bin picking. 
+
+## Project
+
+You have developed a complete solution for bin picking, starting with object segmentation, grasp generation, collision avoidance, and dealing with uncertainty. Do you have an idea on how to improve one of these components? Did you come across an interesting method that you wish to test? Your project will require a clear hyptothesis and an experimental design in Webots. The final deliverable is a paper (4-6 pages, IEEE double column format) that describes your experimental setup and your findings.  
+
+## Grading
+
+Lab (50%), Final Project (35%), Attendance/Participation (15%)
+
+
+## Textbook
+
+"Introduction to Autonomous Robotics” by Nikolaus Correll [[LINK]](https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots)
+
+## Topics Covered (in loose chronological order)
+
+ * Odometry
+ * Forward and Inverse Kinematics
+ * World Representations and Mapping
+ * Path Planning
+ * Sensors and Sensor Selection
+ * Feature Engineering and Navigation
+ * Applied Machine Learning for Robotics
+ * AI for Game Solving
+ * Mathematical Models for Handling Uncertainty
+ * Debates
+
+If time allows:
+
+ * Introduction to Interactive Machine Learning and Human-in-the-loop Systems
+ * Activity Recognition and Segmentation
+ * Natural Language Processing for Robotics
+ * Robot Architectures
+ * Socially Assistive Robotics
+
+## Spring 2021 considerations
+
+For Spring 2021, we will welcome a class that has double the amount of enrolled students and double the amount of teaching support. In order to maintain the same high standards of quality we had in past semesters, a number of special considerations and arrangements are needed to allow the class to proceed smoothly during the semester:
+
+ * Please favor Piazza over email for your communications. Most of the technical questions are shared among the broader student population, and asking them on Piazza will guarantee swift processing of your request. Also, be aware that you can (and should) use Piazza to reach out to the team of instructors in private!
+ * To speed up communications and solve issues and concerns swiftly, please address your communications to the whole team rather than a specific instructor or TA. That is, if you have an email that you would normally send to a TA, please send your email to both TAs and have both instructors in Cc. If some concern needs to be elevated to the attention of your instructors exclusively, please send an email to both instructors.
+ * Please remember that, while lectures are with the whole class, you are assigned to only one of the two lab sections and you are expected to attend that specific section.
+ * Attendance is not mandatory but recommended. While lectures will be recorded for your perusal, we want you to attend class synchronously and engage with the content and the instructors. For this reason, we have decided to put even more emphasis to attendance and participation in your grade. In short:
+   * If you attend class (both labs and lectures) regularly you will get 5% in participation
+   * If you attend class regularly AND ask questions, help your classmates, and contribute to the quality of the class and your own pedagogy, you will get 10%---which will become an extra credit opportunity for you!
+ * Lectures will have semi-regular quizzes. Your answers to the quizzes won’t be necessarily part of your grade, therefore please try to answer them to the best of your capabilities and without using online resources to get the answer right. However, we will use quizzes to automatically record attendance.
+ * Despite the title, this is not an introductory class. It is meant to be a gentle introduction to a very complex topic, and as such you should expect the level of difficulty to be somewhat reflective of the complexity of the pedagogy. From our past experience with teaching this course, the most successful students were those who participated proactively and worked regularly throughout the semester, and our recommendation is to try to anticipate any lacuna in your preparation (which we will be happy to help you fill) or issue with the material. We are here to help you be successful in this class!
+
+
+# Example video
+
+{% include video.html url="//www.youtube.com/embed/t8lPpKMTFOA" %}
+
