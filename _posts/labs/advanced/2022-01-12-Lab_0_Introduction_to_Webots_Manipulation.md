@@ -1,10 +1,7 @@
 ---
-title: "CSCI 4302 - Lab0"
-description: "Manipulation"
-type: csci4302lab
+title: "CSCI 4302 - Lab0 - Manipulation"
+img-thumb: UR5cans.png
 ---
-
-# Lab 0: Introduction Webots
 
 {% include image.html url="UR5cans.png" max-width="45%" description="A UR5e robot picking up a can"%}
 
