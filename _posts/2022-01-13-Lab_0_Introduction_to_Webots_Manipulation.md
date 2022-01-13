@@ -1,5 +1,4 @@
 ---
-permalink: 01-11-2022-Lab_0_Introduction_toWebots.md
 title: "CSCI 4302 - Lab0"
 description: "Manipulation"
 type: csci4302lab
