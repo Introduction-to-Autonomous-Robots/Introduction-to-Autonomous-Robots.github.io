@@ -58,7 +58,7 @@ You can use the Webots reference to find out what the member functions of each o
 ### Run an external controller
 Most often, we are interested in running the controller in its own Kernel to faciliate debugging.
 
-- In order to use an external controller, select "<extern>" from the list of controllers
+- In order to use an external controller, select "\<extern\>" from the list of controllers
 - Follow the instructions on https://www.cyberbotics.com/doc/guide/running-extern-robot-controllers?tab-os=macos&tab-language=python#environment-variables to setup environment variables that allow your Python interpreter to find the Webots libraries and connect to the Webots controller
 - Run your controller in a terminal, Jupyter Lab, Visual Studio or any other IDE that you are comfortable with
 - You can store all the commands that are needed in a file and then run them by typing "source <yourfilename>"
