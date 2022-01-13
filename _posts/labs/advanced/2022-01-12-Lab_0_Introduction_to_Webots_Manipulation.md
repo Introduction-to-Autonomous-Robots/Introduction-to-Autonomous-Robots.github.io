@@ -1,9 +1,8 @@
 ---
 title: "CSCI 4302 - Lab0 - Manipulation"
 img-thumb: UR5cans.png
+img: UR5cans.png
 ---
-
-{% include image.html url="UR5cans.png" max-width="45%" description="A UR5e robot picking up a can"%}
 
 The goal of this lab is to understand the architecture and key data structures in Webots and how to access them from Python. You will augment a manipulating arm with a 3D camera and implement a simple state machine in Python to grasp a can using a distance sensor. 
 
