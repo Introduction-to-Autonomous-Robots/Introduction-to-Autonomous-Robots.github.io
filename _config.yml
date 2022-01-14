@@ -54,9 +54,23 @@ defaults:
       category: "wiki"
   -
     scope:
-      path: "_posts/news"
+      path: "_posts/labs"
     values:
-      category: "news"
+      category: "labs"
+  -
+    scope:
+      path: "_posts/labs/advanced"
+    values:
+      type: "article"
+      category: [labs, csci4302]
+
+  -
+    scope:
+      path: "_posts/labs/intro"
+    values:
+      type: "article"
+      category: [labs, csci3302]
+
   -
     scope:
       path: "_posts/research"

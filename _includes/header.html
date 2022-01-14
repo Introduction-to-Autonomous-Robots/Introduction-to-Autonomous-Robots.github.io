@@ -18,15 +18,22 @@
 
                 {% if page.type == "csci3302" %}
                 <li class="nav-item page-scroll">
-                    <a class="nav-link" href="#post-cv">csci3302</a>
+                    <a class="nav-link" href="#csci3302">csci3302</a>
                 </li>
                 {% else %}
                 <li class="nav-item page-scroll">
                     <a class="nav-link" href="/csci3302.html">csci3302</a>
-	          </li>
-		<li class="nav_item page-scroll">
-		   <a class="nav-link" href="/csci4302.html">csci4302</a>
-	        </li>
+	            </li>
+                {% endif %}
+
+                {% if page.type == "csci4302" %}
+                <li class="nav-item page-scroll">
+                    <a class="nav-link" href="#csci4302">csci4302</a>
+                </li>
+                {% else %}
+                <li class="nav-item page-scroll">
+                    <a class="nav-link" href="/csci4302.html">csci4302</a>
+                </li>
                 {% endif %}
 
             </ul>
@@ -35,7 +42,7 @@
     </nav>
 
     <!-- Header -->
-    {% if page.type != "article" and page.type != "fourofour" and page.type != "csci3302" %}
+    {% if page.type != "article" and page.type != "fourofour" %}
     <header>
         <div class="container {% if page.type != "cv" %}bottom-border{% endif %}">
             <div class="row">

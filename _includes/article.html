@@ -1,7 +1,7 @@
 
     <section id="post">
         <div class="container" id="portfolio">
-            {% if page.type != "home" %}
+            {% if page.type == "article" %}
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>{{ page.title }}</h2>
@@ -15,11 +15,10 @@
                 </div>
             </div>
             {% endif %}
-
             <div id="article" itemprop="articleBody">
                 {% if page.img %}
                     <div id="article-img" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                        <img src="/img/portfolio/{{ page.img }}" class="img-fluid img-centered img-container" style="margin-bottom: 60px;" alt="{{ page.alt }}" itemprop="url contentUrl">
+                        <img src="/img/labs/{{ page.img }}" class="img-fluid img-centered img-container" style="margin-bottom: 60px;" alt="{{ page.alt }}" itemprop="url contentUrl">
                     </div>
                 {% endif %}
 
