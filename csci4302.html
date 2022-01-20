@@ -50,6 +50,7 @@ The goal of this lab is to understand the architecture and key data structures i
 
 The goal of this lab is to implement basic inverse kinematics that allows a Universal Robot UR5 to move from point to point following the shortest path in Cartesian and Joint space (akin to the "moveL" and "moveJ" that the real UR5 API provides). You will first implement a closed-form solution of the UR5's inverse kinematics and then implement a basic trajectory following algorithm. These commands will be demonstrated by moving the robot above a red ball placed underneath it. This will require mounting a stereo camera at the robot's end-effector and implementation of basic image processing routines.  
 
+{% include image.html url="labs/UR5IK.png" max-width="45%" description="A UR5e robot" %}
 ## Lab 2: Grasping
 
 The goal of this lab is to model a simple gripping mechanism in Webots and use it to pick up a ball that is placed in the robot's field of view and dropping it into a bin next to the robot. This lab requires a working implementation of inverse kinematics, trajectory controller, and simple perception from "Lab 1: inverse kinematics".
