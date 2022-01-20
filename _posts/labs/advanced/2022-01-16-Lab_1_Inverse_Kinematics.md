@@ -22,7 +22,8 @@ A UR5e robot is positioned to be able to collect beverage cans that are presente
 The robot is positioned such that it can reach the entire width of the conveyor belt, allowing it to capture cans no matter where they are on the conveyor belt.
 The goal of this lab is to implement the motion primitives that are necessary to move the robot appropriately.
 This lab needs to be implemented in three steps. 
-First, implement all the tooling that allows Webots to read the robot's joints and set them. Second, implement the forward kinematics of the robot to obtains it's actual position as well as the position of all its joint. 
+First, implement all the tooling that allows Webots to read the robot's joints and set them. 
+Second, implement the forward kinematics of the robot to obtain it's actual position as well as the position of all its joint. 
 Finally,  implement a basic IK solver that computes the target joint angles for a given pose. You will need to implement a loop that waits until the robot is close to the desired location. 
 This will be your "MoveJ" command. 
 Second, generate a trajectory that allows the robot to approximately move on a line between two points using "MoveJ".
@@ -30,6 +31,10 @@ This time, draw the next waypoint as soon as the robot is close enough.
 This will be your "MoveL" command.
 
 This is a 3-week lab. Plan for satisfying the "preliminaries" in Week 1, implementing the MoveJ command in Week 2, and implementing MoveL in Week 3.
+
+## Required Files
+
+- Download files from [Github](https://github.com/Introduction-to-Autonomous-Robots/labs/tree/main/csci4302manipulation/lab1_inverse_kinematics) 
 
 ### Exercises
 
