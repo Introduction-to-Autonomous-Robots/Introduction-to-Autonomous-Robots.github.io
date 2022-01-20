@@ -36,13 +36,12 @@ This is a 3-week lab. Plan for satisfying the "preliminaries" in Week 1, impleme
 
 - Download files from [Github](https://github.com/Introduction-to-Autonomous-Robots/labs/tree/main/csci4302manipulation/lab1_inverse_kinematics) 
 
-### Exercises
 
-- Inspect the Webots world and think about the motions that would be necessary to captur`e every can on the conveyor belt. What would happen if the robot would be allowed to move to these positions any way it wants? Why would you need only commands like MoveJ, but also MoveL?
+> Inspect the Webots world and think about the motions that would be necessary to captur`e every can on the conveyor belt. What would happen if the robot would be allowed to move to these positions any way it wants? Why would you need only commands like MoveJ, but also MoveL?
 
-- Think about the end-effector's pose relative the base of the robot. What sensor information do you need to compute the pose of the robot's end-effector?
+> Think about the end-effector's pose relative the base of the robot. What sensor information do you need to compute the pose of the robot's end-effector?
 
-- How many solutions will you possibly get to achieve the same pose using a six degree-of-freedom robot?
+> How many solutions will you possibly get to achieve the same pose using a six degree-of-freedom robot?
 
 
 ## Preliminaries
@@ -50,8 +49,7 @@ This is a 3-week lab. Plan for satisfying the "preliminaries" in Week 1, impleme
 - Implement functionality to control and read the position of all six joint angles of the UR5e in Webots. Open the robot's Proto file to find out how all its joins are called. Note that it takes a couple of seconds for the robot to "boot" and provide accurtate joint angles. You will therefore need to run robot.step() a couple of times.
 - Play with different poses of the robot by manually using its joints. Which joint angles should be "forbidden" to prevent damage to the robot or the environment?
 
-### Exercise 
-Think about how you would implement a function that checks whether a set of joint angles is allowable or not. Is it sufficient to simply specify a range for each joint? Why not? Consult the UR5e manual to find out how a user can specify "keep out" zones.
+> Think about how you would implement a function that checks whether a set of joint angles is allowable or not. Is it sufficient to simply specify a range for each joint? Why not? Consult the UR5e manual to find out how a user can specify "keep out" zones.
 
 - Implement the forward kinematics for the UR5e robot. You can copy and paste code that you find online, but do not use a library as you will need to deliver a single file. Output the homogeneous transform for selected joint angles. 
 - Write a function that tests whether a given set of joint angles will result in any point of the robot being left or right of a given plane. Notice the word "any".
@@ -94,11 +92,8 @@ Assume "plane" to be a glboal variable that defines the robot's keep-out zone.
 
 If you are using Jupyter lab, you can use the following commands to turn your notebook into a stand alone controller:
 
-try:
-    !jupyter nbconvert --to script ik_solver.ipynb
-    %load_ext autoreload
-    %autoreload 2   
-except:
-    pass
+   !jupyter nbconvert --to script ik_solver.ipynb
+   %load_ext autoreload
+   %autoreload 2   
 
 This assumes that your notebook is called "ik_solver" and will create a script "ik_solver.ipynb"
