@@ -92,8 +92,13 @@ Assume "plane" to be a glboal variable that defines the robot's keep-out zone.
 
 If you are using Jupyter lab, you can use the following commands to turn your notebook into a stand alone controller:
 
+```
+try:
    !jupyter nbconvert --to script ik_solver.ipynb
    %load_ext autoreload
    %autoreload 2   
+except:
+    pass
+```
 
 This assumes that your notebook is called "ik_solver" and will create a script "ik_solver.ipynb"
