@@ -84,9 +84,8 @@ Note: You can use the orientation of the robot at the beginning of the motion an
 
 - A Python module with blocking implementations of isJointPosSafe, MoveJ and MoveL. 
 Both functions will need to execute until the robot reaches a desired location or return failure.
-Assume "plane" to be a glboal variable that defines the robot's keep-out zone. 
-- Please only deliver one Python file, that is all code for inverse kinematics needs to be contained therein. Do not submit iPython notebooks, but convert them into a stand-alone controller (see below). 
-
+Assume "plane" to be a global variable that defines the robot's keep-out zone. 
+- Please only deliver one Python file, that is all code for inverse kinematics needs to be contained therein. Do not submit iPython notebooks, but convert them into a stand-alone controller (see below). Only provide variable and function definitions. Make sure you comment out all your other code/tests, so that your submission can be tested by simply importing the file. 
 
 # Notes
 
