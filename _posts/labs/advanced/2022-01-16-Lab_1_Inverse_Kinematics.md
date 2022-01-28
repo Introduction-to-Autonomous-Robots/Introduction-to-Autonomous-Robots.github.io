@@ -101,4 +101,4 @@ except:
     pass
 ```
 
-This assumes that your notebook is called "ik_solver" and will create a script "ik_solver.ipynb"
+This assumes that your notebook is called "ik_solver.ipynb" and will create a script "ik_solver.py"
