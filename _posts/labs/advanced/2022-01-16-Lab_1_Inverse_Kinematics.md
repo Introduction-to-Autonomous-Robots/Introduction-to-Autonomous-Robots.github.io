@@ -86,7 +86,7 @@ Note: You can use the orientation of the robot at the beginning of the motion an
 2. Feed the result (homogeneous transform) to the IK. Do you get the same joint angles?
 3. Subtract 20cm from the X-value in the homogeneous transform and feed to IK. Does the robot move to the right?
 4. You can set the joint angles directly at first (wait 200 timesteps) and see what happens
-5. Implement MoveJ as a for-loop of 4. Implement MoveL to move through Cartesian Space. 
+5. Instead of moving all at once, implement MoveJ as a for-loop moving step by step. Now implement MoveL to move through Cartesian Space. 
 
 
 
