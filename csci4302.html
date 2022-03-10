@@ -28,7 +28,7 @@ Understand the specific challenges in robotic manipulation, ranging from mechani
 | 4   | Forces | Chapter 4 | Inverse kinematics |
 | 5   | Grasping | Chapter 5 | [Grasping]({% post_url labs/advanced/2022-02-06-Lab_2_Point_Clouds %}) |
 | 6   | Actuation for manipulation | Chapter 6, ["Systems, devices, components, and methods for a compact robotic gripper with palm-mounted sensing, grasping, and computing devices and components." U.S. Patent No. 11,148,295](https://patents.google.com/patent/US11148295B2/en) | Grasping |
-| 7   | Sensors for manipulation | Chapter 7 | [Collision avoidance]({% post_url labs/advanced/2022-02-24-Lab_3_Collision_Avoidance %}) |
+| 7   | Sensors for manipulation | Chapter 7 | [Oriented grasping]({% post_url labs/advanced/2022-02-24-Lab_3_Oriented_Grasping %}) |
 | 8   | Vision for manipulation | Chapter 8 | Collision avoidance |
 | 9   | Features: segmentation and PCA | Chapter 9, Section B.5 | Object recognition |
 | 10  | Task execution using Behavior Trees | Chapter 11 | Object recognition |
@@ -51,13 +51,20 @@ The goal of this lab is to understand the architecture and key data structures i
 The goal of this lab is to implement basic inverse kinematics that allows a Universal Robot UR5 to move from point to point following the shortest path in Cartesian and Joint space (akin to the "moveL" and "moveJ" that the real UR5 API provides). You will first implement a closed-form solution of the UR5's inverse kinematics and then implement a basic trajectory following algorithm. These commands will be demonstrated by moving the robot above a red ball placed underneath it. This will require mounting a stereo camera at the robot's end-effector and implementation of basic image processing routines.  
 
 {% include image.html url="labs/UR5IK.png" max-width="45%" description="A UR5e robot" %}
-## Lab 2: Grasping
+## Lab 2: Simple Grasping
 
 The goal of this lab is to implement basic point cloud processing algorithms to detect and localize the cans as they come on the conveyor belt. This lab requires a working implementation of inverse kinematics, trajectory controller, and state machine from labs 0 and 1.
 
 {% include image.html url="labs/canpcl.png" max-width="45%" description="A soda can and the conveyor belt after processing in Open3D" %}
 
-## Lab 3: Collision avoidance
+## Lab 3: Oriented Grasping
+
+The goal of this lab is to translate 3D object poses into relevant grasp poses. For simplicity, we will focus on grasping objects using their oriented bounding box.
+We will also assume that perception is perfect. 
+
+{% include image.html url="labs/cansegmentation.png" max-width="45%" description="A basket of soda cans after segmentation" %}
+
+## Lab 3.5: Collision avoidance
 
 The goal of this lab is to implement a simple collision avoidance pipeline. The UR5 is positioned above a bin with known dimensions. You will first model the bin and the robot end-effector in a simple physics simulator (bullet). Here, the bin dimensions are given and you simply need to detect the bin in the 3D camera data. 
 
