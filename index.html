@@ -1,7 +1,15 @@
 ---
 type: home
 ---
-An open textbook focusing on computational principles of autonomous robots. The [source-code](https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots) is released under Creative Commons 2.0 (CC-BY-NC-ND), whereas the print version is copyrighted by MIT Press. You are therefore permitted to use images and content from the book for non-commercial purposes (including teaching) with proper attribution, but you cannot post compiled versions of the book online.
+An open textbook focusing on computational principles of 
+autonomous robots. The [source-code](https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots) 
+is released under Creative Commons 2.0 (CC-BY-NC-ND), whereas 
+the print version is copyrighted by MIT Press. You are therefore 
+permitted to use images and content from the book for 
+non-commercial purposes (including teaching) with proper attribution, but you cannot post compiled versions of the book online.
+
+{% include image.html url="cover.jpeg" max-width="45%" %}
+ 
 
 # Reference
 
@@ -18,65 +26,4 @@ This book can be cited as follows:
   publisher={MIT Press, Cambridge, MA}
 }
 ~~~
-
-# Exercises
-
-We have developed a series of exercises in [Webots](http://cyberbotics.com). This list is constantly growing and can be recombined into different curricula ranging from basic mobile robotics to robotic manipulation classes. Many of the exercises come with autograders, [Webots Supervisors](https://cyberbotics.com/doc/reference/supervisor) that automatically execute the students' code and test whether their world and controllers reach a specific state, making this curriculum suitable for larger classes. 
-
-## Lab 1: Reactive Behaviors and State Machines
-
-{% include image.html url="A.png" max-width="45%" description="I rock"%}
-- Basic reactive behaviors such as attraction and avoidance
-- How to compose multiple behaviors into more complex ones
-- The notion of state and basic ways of implementation
-
-## Lab 2: Line following and odmetery
-
-{% include image.html url="B.png" max-width="45%" %}
-
-- Implement the forward kinematics of a differential wheel robot on the ePuck platform 
-- To experience and quantify sensor noise from wheel-slip, discretization, and timing violations 
-- To understand the concept of “loop closure”
-
-## Lab 3: Inverse kinematics and feedback control
-
-{% include image.html url="C.png" max-width="45%" %}
-
-- Understand how to calculate the wheel speed given a desired velocity and/or position 
-- Implement basic feedback control 
-- See the need for higher-level reasoning / path-planning
-
-## Lab 4: Mapping with Lidar
-
-{% include image.html url="D.png" max-width="45%" %}
-
-- Implement a basic discrete map representation
-- Use coordinate transforms to map sensor readings into world coordinates
-- Understand discrete and algorithmic aspects of mapping
-
-## Lab 5: Path planning
-
-{% include image.html url="E.png" max-width="45%" %}
-
--	Understand the challenges of map construction
--	Implement a shortest-path finding algorithm (Dijkstra's algorithm or A*) on a grid map
--	Use path planning to generate a discrete set of waypoints for a robot to follow and demonstrate it in the Tiago environment
-
-## Lab 6: Inverse kinematics on an industrial arm
-{% include image.html url="F.png" max-width="45%" %}
-
-- Understand the internal representation of kinematics (URDF)
-- Use external IK solvers (ikpy) to find IK solutions
-- Develop a complex robotic application and draw images from SVG files
-
-# Curricula
-
-## Introduction to Robotics
-
-A, B, C, D, E
-
-## Advanced Robotics
-
-G, H, I, J, K, L
-
 

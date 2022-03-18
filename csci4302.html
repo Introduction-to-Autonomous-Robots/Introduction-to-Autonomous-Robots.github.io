@@ -59,27 +59,37 @@ The goal of this lab is to implement basic point cloud processing algorithms to 
 
 ## Lab 3: Oriented Grasping
 
-The goal of this lab is to translate 3D object poses into relevant grasp poses. For simplicity, we will focus on grasping objects using their oriented bounding box.
-We will also assume that perception is perfect. 
+The goal of this lab is to translate 3D object poses into relevant grasp poses
+ using principal component analysis to identify an object's oriented bounding box.
+We will assume that perception is perfect. 
 
 {% include image.html url="labs/cansegmentation.png" max-width="45%" description="A basket of soda cans after segmentation" %}
 
-## Lab 3.5: Collision avoidance
+## Lab 4: Collision avoidance
 
-The goal of this lab is to implement a simple collision avoidance pipeline. The UR5 is positioned above a bin with known dimensions. You will first model the bin and the robot end-effector in a simple physics simulator (bullet). Here, the bin dimensions are given and you simply need to detect the bin in the 3D camera data. 
+The goal of this lab is to implement a simple collision avoidance pipeline. 
+The UR5 is positioned above a bin with known dimensions. You will first model 
+the bin and the robot end-effector in a simple physics simulator (bullet). 
+Here, the bin dimensions are given and you simply need to detect the bin in 
+the 3D camera data. 
 
-{% include image.html url="labs/cansegmentation.png" max-width="45%" description="A basket of soda cans after segmentation" %}
+{% include image.html url="labs/pybullet.png" max-width="45%" 
+description="URDF representatin of the basket and gripper in PyBullet" %}
 
-## Lab 4: Object recognition
-The goal of this lab is to identify individual objects in dense, cluttered environments such as a bin. 
-Implement a simple segmentation algorithm (DBSCAN) to identify individual balls in the environment and use principal component analysis to identify possible grasp poses. 
+## Lab 5: Object recognition
+The goal of this lab is to identify individual objects in dense, cluttered 
+environments such as a bin. 
+Implement a simple segmentation algorithm (DBSCAN) to identify individual objects
+ in the environment. 
 
-## Lab 5: Bin picking
-Use your object recognition, collision avoidance, and inverse kinematic code to implement a Behavior Tree for bin picking. 
+## Lab 6: Bin picking
+Use your object recognition, collision avoidance, and inverse kinematic code 
+to implement a Behavior Tree for bin picking. 
 
 ## Project
 
-You have developed a complete solution for bin picking, starting with object segmentation, grasp generation, collision avoidance, and dealing with uncertainty. Do you have an idea on how to improve one of these components? Did you come across an interesting method that you wish to test? Your project will require a clear hyptothesis and an experimental design in Webots. The final deliverable is a paper (4-6 pages, IEEE double column format) that describes your experimental setup and your findings.  
+You have developed a complete solution for bin picking, starting with object 
+segmentation, grasp generation, collision avoidance, and dealing with uncertainty. Do you have an idea on how to improve one of these components? Did you come across an interesting method that you wish to test? Your project will require a clear hyptothesis and an experimental design in Webots. The final deliverable is a paper (4-6 pages, IEEE double column format) that describes your experimental setup and your findings.  
 
 ## Grading
 
