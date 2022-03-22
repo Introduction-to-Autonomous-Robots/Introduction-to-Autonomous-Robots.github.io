@@ -1,7 +1,7 @@
 ---
-title: "CSCI 4302 - Lab 2 - Point Clouds"
-img-thumb: cansegmentation.png
-img: cansegmentation.png
+title: "CSCI 4302 - Lab 4 - Collision Avoidance"
+img-thumb: pybullet.png
+img: pybullet.png
 ---
 
 The goal of this lab is to populate the pybullet server with real-time information from the Webots world and check whether there is a collision with projected motions of the robot in order to determine suitable grasps.
@@ -34,7 +34,7 @@ This lab consists of two worlds: an environment with a crate full of randomly pl
 
 ## Required Files
 
-- Download files from [Github](https://github.com/Introduction-to-Autonomous-Robots/labs/tree/main/csci4302manipulation/lab3_collisionavoidance)
+- Download files from [Github](https://github.com/Introduction-to-Autonomous-Robots/labs/tree/main/csci4302manipulation/lab4_collisionavoidance)
 - You will need to install the following libraries: open3d, matplotlib, PyBullet.
 
 ## Preliminaries
