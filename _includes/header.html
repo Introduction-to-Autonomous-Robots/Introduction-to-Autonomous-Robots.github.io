@@ -36,6 +36,16 @@
                 </li>
                 {% endif %}
 
+                {% if page.type == "resources" %}
+                <li class="nav-item page-scroll">
+                    <a class="nav-link" href="#resources">resources</a>
+                </li>
+                {% else %}
+                <li class="nav-item page-scroll">
+                    <a class="nav-link" href="/resources.html">resources</a>
+                </li>
+                {% endif %}
+
                 {% if page.type == "authors" %}
                 <li class="nav-item page-scroll">
                     <a class="nav-link" href="#authors">authors</a>
