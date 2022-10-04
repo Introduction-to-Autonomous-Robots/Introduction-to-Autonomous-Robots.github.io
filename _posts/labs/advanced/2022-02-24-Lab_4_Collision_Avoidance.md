@@ -2,6 +2,7 @@
 title: "CSCI 4302 - Lab 4 - Collision Avoidance"
 img-thumb: pybullet.png
 img: pybullet.png
+permalink: lab-collision-avoidance.html
 ---
 
 The goal of this lab is to populate the pybullet server with real-time information from the Webots world and check whether there is a collision with projected motions of the robot in order to determine suitable grasps.

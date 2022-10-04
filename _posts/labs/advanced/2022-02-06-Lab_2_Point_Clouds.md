@@ -2,6 +2,7 @@
 title: "CSCI 4302 - Lab 2 - Point Clouds"
 img-thumb: canpcl.png
 img: canpcl.png
+permalink: lab-point-clouds.html
 ---
 
 The goal of this lab is to get familiar with basic point cloud operations. Point clouds are derived from depth images and allow the robot to perceive its environment in 3D. We will use plane recognition, filtering, and bounding box fitting algorithms to segment and localize objects in the environment. We will then use the state machine from [Lab 0]({% post_url labs/advanced/2022-01-12-Lab_0_Introduction_to_Webots_Manipulation %}) 

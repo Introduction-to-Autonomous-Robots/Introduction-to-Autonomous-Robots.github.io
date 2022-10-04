@@ -2,6 +2,7 @@
 title: "CSCI 4302 - Lab1 - Inverse Kinematics"
 img-thumb: UR5IK.png
 img: UR5IK.png
+permalink: lab-inverse-kinematics.html
 ---
 
 The goal of this lab is to implement inverse kinematics and trajectory control for the UR5e robot, mimicking the built-in functions "MoveJ" and "MoveL" of the UR robot. "MoveJ" implements inverse kinematics (IK) and moves the robot in joint space. 

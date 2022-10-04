@@ -2,6 +2,7 @@
 title: "CSCI 4302 - Lab 3 - Oriented Grasping"
 img-thumb: cansegmentation.png
 img: cansegmentation.png
+permalink: lab-oriented-grasping.html
 ---
 
 The goal of this lab is to compute suitable grasp poses given an object-of-interest's pose.

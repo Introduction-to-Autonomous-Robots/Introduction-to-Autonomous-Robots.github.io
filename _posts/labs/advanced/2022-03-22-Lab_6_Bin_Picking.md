@@ -2,6 +2,7 @@
 title: "CSCI 4302 - Lab 6 - Bin Picking"
 img-thumb: binpicking.png
 img: binpicking.png
+permalink: lab-bin-picking.html
 ---
 
 The goal of this lab is to combine inverse kinematics, object recognition, grasping and collision avoidance into a functional bin picking pipeline using "Behavior Trees". In order to facilitate this process, you are provided with three iPython notebooks:

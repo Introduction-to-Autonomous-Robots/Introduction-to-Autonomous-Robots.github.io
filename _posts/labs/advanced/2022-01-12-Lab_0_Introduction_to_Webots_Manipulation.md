@@ -1,5 +1,6 @@
 ---
 title: "CSCI 4302 - Lab0 - Manipulation"
+permalink: lab-manipulation-introduction.html
 img-thumb: UR5cans.png
 img: UR5cans.png
 ---
